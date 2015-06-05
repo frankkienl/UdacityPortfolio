@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mijn Portfolio</string>
+    <string name="spotify_streamer">Spotify Speler App</string>
+    <string name="title_my_nanodegree_apps">Mijn Nanodegree Apps!</string>
+    <string name="super_duo">Super Duo</string>
+    <string name="build_it_bigger">Bouw Het Groter App</string>
+    <string name="xyz_reader">XYZ Lezer App</string>
+    <string name="capstone">Eindopdracht App</string>
+    <string name="super_duo_scores">Scores App</string>
+    <string name="super_duo_library">Bibliotheek App</string>
+    <string name="toast_app_todo">Deze knop zal mijn %s starten !</string>
+    <string name="button_not_found">Knop niet gevonden.</string>
+</resources>

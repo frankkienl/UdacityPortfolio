@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Portfolio</string>
+    <string name="spotify_streamer">Spotify Streamer App</string>
+    <string name="title_my_nanodegree_apps">My Nanodegree Apps!</string>
+    <string name="super_duo">Super Duo</string>
+    <string name="build_it_bigger">Build It Bigger App</string>
+    <string name="xyz_reader">XYZ Reader App</string>
+    <string name="capstone">Capstone App</string>
+    <string name="super_duo_scores">Scores App</string>
+    <string name="super_duo_library">Library App</string>
+    <string name="toast_app_todo">This button will launch my %s !</string>
+    <string name="button_not_found">Button not found</string>
+</resources>
