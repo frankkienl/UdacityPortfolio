@@ -1,5 +1,8 @@
 package nl.frankkie.portfolio;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -51,6 +54,23 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         String text = getString(R.string.button_not_found);
         String template = getString(R.string.toast_app_todo);
         switch (v.getId()){
+            case R.id.btn_spotify_streamer: {
+                PackageManager pm = getPackageManager();
+                Intent spotifyStreamerIntent = pm.getLaunchIntentForPackage("nl.frankkie.spotifystreamer");
+                if (spotifyStreamerIntent == null){
+                    //not installed, send user to place to download apk
+                    Intent downloadIntent = new Intent();
+                    downloadIntent.setAction(Intent.ACTION_VIEW);
+                    downloadIntent.setData(Uri.parse("https://github.com/frankkienl/SpotifyStreamer/releases"));
+                    startActivity(downloadIntent);
+                    text = String.format(getString(R.string.app_not_installed), getString(R.string.spotify_streamer));
+                } else {
+                    //Start Spotify Streamer
+                    text = String.format(getString(R.string.opening_app), getString(R.string.spotify_streamer));
+                    startActivity(spotifyStreamerIntent);
+                }
+                break;
+            }
             case R.id.btn_build_it_bigger: {
                 //http://developer.android.com/guide/topics/resources/string-resource.html#FormattingAndStyling
                 text = String.format(template,getString(R.string.build_it_bigger));
@@ -58,10 +78,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_capstone: {
                 text = String.format(template,getString(R.string.capstone));
-                break;
-            }
-            case R.id.btn_spotify_streamer: {
-                text = String.format(template,getString(R.string.spotify_streamer));
                 break;
             }
             case R.id.btn_super_duo_library: {

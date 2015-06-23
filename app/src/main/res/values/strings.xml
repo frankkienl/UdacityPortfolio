@@ -10,4 +10,6 @@
     <string name="super_duo_library">Library App</string>
     <string name="toast_app_todo">This button will launch my %s !</string>
     <string name="button_not_found">Button not found</string>
+    <string name="opening_app">Opening %s</string>
+    <string name="app_not_installed">The %s is not installed</string>
 </resources>
